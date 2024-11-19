@@ -1,0 +1,147 @@
+.calc {
+  margin: 50px auto;
+  width: 350px;
+  border-radius: 20px;
+  background: #535353;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
+}
+
+.calc-screen {
+  height: 80px;
+  padding: 15px 20px 10px;
+  display: grid;
+  justify-items: end;
+  align-items: end;
+}
+
+.calc-screen {
+  text-align: right;
+  font-size: 4rem;
+  margin: 0;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+}
+
+.btn {
+  all: unset;
+  width: auto;
+  height: auto;
+  background-color: #7d7d7d;
+  text-align: center;
+  line-height: 70px;
+  font-size: 30px;
+  cursor: pointer;
+  user-select: none;
+  color: #ededed;
+}
+
+.btn.divide {
+  background-image: url("../assets/division-light.svg");
+  background-size: 30px 30px;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: transparent;
+}
+
+.btn.plus-minus {
+  background-image: url("../assets/plusminus-light.svg");
+  background-size: 30px 30px;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: transparent;
+}
+
+.btn:hover {
+  filter: brightness(120%);
+}
+
+.btn:active {
+  filter: brightness(90%);
+}
+
+.btn.bg-grey {
+  background-color: #646464;
+}
+
+.btn.bg-orange {
+  background-color: #ff9f0b;
+}
+
+.btn.zero {
+  grid-column: span 2;
+  width: auto;
+}
+
+.theme-text {
+  margin-top: 50px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 20px;
+  font-family: "Courier New", Courier;
+}
+
+.theme-toggle {
+  all: unset;
+  display: block;
+  margin: 0 auto;
+  width: 50px;
+  height: 50px;
+  background: #646464;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 20px;
+  cursor: pointer;
+  color: #ededed;
+}
+
+.theme-toggle:hover {
+  filter: brightness(120%);
+}
+
+.theme-toggle:active {
+  filter: brightness(90%);
+}
+
+.light-theme .calc {
+  background: #fff;
+}
+
+.light-theme .btn {
+  background: #d3d3d3;
+  color: #000;
+}
+
+.light-theme .btn.bg-grey {
+  background: #c0c0c0;
+}
+
+.light-theme .btn.bg-orange {
+  background: #ff8c00;
+}
+
+.light-theme .btn.divide {
+  background-image: url("../assets/division-dark.svg");
+  background-size: 30px 30px;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: transparent;
+}
+
+.light-theme .btn.plus-minus {
+  background-image: url("../assets/plusminus-dark.svg");
+  background-size: 30px 30px;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: transparent;
+}
+
+.light-theme .calc-screen {
+  background: #d2d2d2;
+  color: #333;
+}
