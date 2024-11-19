@@ -36,8 +36,8 @@ export default {
     compress: true,
     port: 8080,
     open: true,
-    hot: true, // включение горячей перезагрузки
-    watchFiles: ['src/**/*', 'index.html'], // следит за изменениями в этих файлах
+    hot: true,
+    watchFiles: ['src/**/*', 'index.html'],
   },
   mode: 'development',
 };
