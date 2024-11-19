@@ -43,7 +43,7 @@
 }
 
 .btn.divide {
-  background-image: url("../assets/division-light.svg");
+  background-image: url("/assets/division-light.svg");
   background-size: 30px 30px;
   background-position: center;
   background-repeat: no-repeat;
@@ -51,7 +51,7 @@
 }
 
 .btn.plus-minus {
-  background-image: url("../assets/plusminus-light.svg");
+  background-image: url("/assets/plusminus-light.svg");
   background-size: 30px 30px;
   background-position: center;
   background-repeat: no-repeat;
@@ -127,7 +127,7 @@
 }
 
 .light-theme .btn.divide {
-  background-image: url("../assets/division-dark.svg");
+  background-image: url("/assets/division-dark.svg");
   background-size: 30px 30px;
   background-position: center;
   background-repeat: no-repeat;
@@ -135,7 +135,7 @@
 }
 
 .light-theme .btn.plus-minus {
-  background-image: url("../assets/plusminus-dark.svg");
+  background-image: url("/assets/plusminus-dark.svg");
   background-size: 30px 30px;
   background-position: center;
   background-repeat: no-repeat;
