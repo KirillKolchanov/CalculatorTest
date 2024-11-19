@@ -1,18 +1,18 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+import path from 'path';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
 
-module.exports = {
+export default {
   entry: './src/index.js',
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve('dist'),
     clean: true,
   },
   module: {
     rules: [
       {
         test: /\.svg$/,
-        type: 'asset/inline', // Инлайн SVG в CSS в виде Base64
+        type: 'asset/inline',
       },
       {
         test: /\.css$/,
@@ -32,7 +32,7 @@ module.exports = {
     }),
   ],
   devServer: {
-    static: path.resolve(__dirname, 'dist'),
+    static: path.resolve('dist'),
     compress: true,
     port: 8080,
     open: true,

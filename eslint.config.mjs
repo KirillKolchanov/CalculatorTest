@@ -7,16 +7,16 @@ export default [
   {
     files: ['**/*.js'],
     languageOptions: {
-      sourceType: 'module', // Используем модули ES6
-      globals: globals.browser, // Для браузерных глобальных объектов
+      sourceType: 'module',
+      globals: globals.browser,
     },
   },
   {
-    files: ['webpack.config.js'], // Настроить только для конфигурации Webpack
+    files: ['webpack.config.js'],
     languageOptions: {
       sourceType: 'module',
       globals: {
-        ...globals.node, // Добавляем глобальные переменные Node.js
+        ...globals.node,
         __dirname: 'readonly',
         module: 'readonly',
         require: 'readonly',
@@ -26,8 +26,8 @@ export default [
       node: pluginNode,
     },
     rules: {
-      'node/no-unsupported-features/es-syntax': 'off', // Отключение проверки на синтаксис ES в Node.js
+      'node/no-unsupported-features/es-syntax': 'off',
     },
   },
-  pluginJs.configs.recommended, // Подключаем стандартные правила для JavaScript
+  pluginJs.configs.recommended,
 ];
