@@ -56,6 +56,8 @@ document.querySelector('.buttons').onclick = (event) => {
   }
 
   if (action.includes(key)) {
+    if (!num1) return;
+
     if (finish) {
       finish = false;
     }
@@ -92,16 +94,21 @@ document.querySelector('.buttons').onclick = (event) => {
   }
 
   if (key === '%') {
-    if (!num1 || !sign) return;
+    if (!num1) return;
 
-    if (num2) {
+    if (!num2 && !sign) {
+      num1 = (parseFloat(num1) / 100).toString();
+      out.textContent = num1;
+      finish = true;
+    } else if (num2) {
       num2 = ((parseFloat(num1) * parseFloat(num2)) / 100).toString();
+      out.textContent = num2;
+      finish = false;
     } else {
       num2 = (parseFloat(num1) / 100).toString();
+      out.textContent = num2;
+      finish = false;
     }
-
-    out.textContent = num2;
-    finish = false;
     return;
   }
 };
